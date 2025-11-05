@@ -20,6 +20,7 @@ namespace Tp_DAS
 
         private void FormUsuario_Load(object sender, EventArgs e)
         {
+            this.Text = "FormVendedor";
             labelhor.Text = DateTime.Now.ToString("HH:mm");
             labelFec.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
@@ -86,6 +87,11 @@ namespace Tp_DAS
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void FormUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

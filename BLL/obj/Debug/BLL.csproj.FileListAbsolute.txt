@@ -9,3 +9,14 @@ C:\Users\Oppido\Documents\GitHub\TP_Ferreteria_DAS\BLL\obj\Debug\BLL.csproj.Core
 C:\Users\Oppido\Documents\GitHub\TP_Ferreteria_DAS\BLL\obj\Debug\BLL.csproj.Up2Date
 C:\Users\Oppido\Documents\GitHub\TP_Ferreteria_DAS\BLL\obj\Debug\BLL.dll
 C:\Users\Oppido\Documents\GitHub\TP_Ferreteria_DAS\BLL\obj\Debug\BLL.pdb
+C:\Users\Usuario\Desktop\TP_DAS_Ferreteria\TP_DAS_Ferreteria\BLL\bin\Debug\BLL.dll
+C:\Users\Usuario\Desktop\TP_DAS_Ferreteria\TP_DAS_Ferreteria\BLL\bin\Debug\BLL.pdb
+C:\Users\Usuario\Desktop\TP_DAS_Ferreteria\TP_DAS_Ferreteria\BLL\bin\Debug\BE.dll
+C:\Users\Usuario\Desktop\TP_DAS_Ferreteria\TP_DAS_Ferreteria\BLL\bin\Debug\DAL.dll
+C:\Users\Usuario\Desktop\TP_DAS_Ferreteria\TP_DAS_Ferreteria\BLL\bin\Debug\BE.pdb
+C:\Users\Usuario\Desktop\TP_DAS_Ferreteria\TP_DAS_Ferreteria\BLL\bin\Debug\DAL.pdb
+C:\Users\Usuario\Desktop\TP_DAS_Ferreteria\TP_DAS_Ferreteria\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\TP_DAS_Ferreteria\TP_DAS_Ferreteria\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TP_DAS_Ferreteria\TP_DAS_Ferreteria\BLL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\Usuario\Desktop\TP_DAS_Ferreteria\TP_DAS_Ferreteria\BLL\obj\Debug\BLL.dll
+C:\Users\Usuario\Desktop\TP_DAS_Ferreteria\TP_DAS_Ferreteria\BLL\obj\Debug\BLL.pdb

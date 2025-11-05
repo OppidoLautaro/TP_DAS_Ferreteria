@@ -19,7 +19,7 @@ namespace DAL
 
             SqlParameter[] parameters = new SqlParameter[2];
             parameters[0] = new SqlParameter("@Username",Nombre);
-            parameters[1] = new SqlParameter("@Contraseña", Contraseña);
+            parameters[1] = new SqlParameter("@Contrasena", Contraseña);
 
             DataTable dt = acc.Leer("LoginUsuario", parameters);
 
@@ -30,7 +30,7 @@ namespace DAL
                 user = new Usuario();
                 user.IDUsuario = Convert.ToInt32(row["IDUsuario"]);
                 user.Username = row["Nombre"].ToString();
-                user.Contraseña = row["Contraseña"].ToString();
+                user.Contraseña = row["Contrasena"].ToString();
 
                 user.Rol = new Rol();
                 user.Rol.IDRol = Convert.ToInt32(row["IDRol"]);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,20 @@ namespace Tp_DAS
         {
             InitializeComponent();
         }
+
+        ProductoBLL productoBLL = new ProductoBLL();
+
+        private void ProductosUser_Load(object sender, EventArgs e)
+        {
+            if(listBoxCarrito.Items.Count == 0)
+            {
+                listBoxCarrito.Text="Vacio";
+            }
+
+            dataGridView1.DataSource = productoBLL.ListarProductos();
+        }
+
+
+
     }
 }

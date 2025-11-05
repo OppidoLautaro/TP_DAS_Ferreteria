@@ -57,7 +57,7 @@ namespace Tp_DAS
             }
             else
             {
-                MessageBox.Show("Usuario Incorrecto");
+                MessageBox.Show("Usuario o Contraseña Incorrectos");
             }
         }
 

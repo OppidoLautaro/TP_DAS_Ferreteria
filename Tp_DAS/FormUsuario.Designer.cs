@@ -176,6 +176,7 @@
             this.MinimumSize = new System.Drawing.Size(1120, 886);
             this.Name = "FormUsuario";
             this.Text = "FormUsuario";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormUsuario_FormClosed);
             this.Load += new System.EventHandler(this.FormUsuario_Load);
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();

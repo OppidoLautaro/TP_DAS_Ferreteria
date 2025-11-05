@@ -58,7 +58,7 @@
             this.MenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuLateral.Location = new System.Drawing.Point(0, 0);
             this.MenuLateral.Name = "MenuLateral";
-            this.MenuLateral.Size = new System.Drawing.Size(250, 847);
+            this.MenuLateral.Size = new System.Drawing.Size(250, 961);
             this.MenuLateral.TabIndex = 0;
             // 
             // PanelSubMenu
@@ -138,9 +138,9 @@
             this.panel2.Controls.Add(this.labelFecha);
             this.panel2.Controls.Add(this.labelhora);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(250, 791);
+            this.panel2.Location = new System.Drawing.Point(250, 905);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(854, 56);
+            this.panel2.Size = new System.Drawing.Size(1034, 56);
             this.panel2.TabIndex = 1;
             // 
             // labelFecha
@@ -148,7 +148,7 @@
             this.labelFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelFecha.AutoSize = true;
             this.labelFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFecha.Location = new System.Drawing.Point(787, 27);
+            this.labelFecha.Location = new System.Drawing.Point(967, 27);
             this.labelFecha.Name = "labelFecha";
             this.labelFecha.Size = new System.Drawing.Size(41, 15);
             this.labelFecha.TabIndex = 1;
@@ -160,7 +160,7 @@
             this.labelhora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelhora.AutoSize = true;
             this.labelhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelhora.Location = new System.Drawing.Point(787, 7);
+            this.labelhora.Location = new System.Drawing.Point(967, 7);
             this.labelhora.Name = "labelhora";
             this.labelhora.Size = new System.Drawing.Size(41, 15);
             this.labelhora.TabIndex = 0;
@@ -174,7 +174,7 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(250, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(854, 791);
+            this.panelContenedor.Size = new System.Drawing.Size(1034, 905);
             this.panelContenedor.TabIndex = 2;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
@@ -182,7 +182,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::Tp_DAS.Properties.Resources.s;
-            this.pictureBox1.Location = new System.Drawing.Point(258, 203);
+            this.pictureBox1.Location = new System.Drawing.Point(348, 260);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(388, 320);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -200,7 +200,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1104, 847);
+            this.ClientSize = new System.Drawing.Size(1284, 961);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.MenuLateral);
@@ -208,7 +208,7 @@
             this.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1120, 886);
+            this.MinimumSize = new System.Drawing.Size(1300, 1000);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
