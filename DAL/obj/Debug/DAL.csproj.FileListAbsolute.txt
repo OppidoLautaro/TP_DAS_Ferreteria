@@ -1,0 +1,9 @@
+C:\Users\Oppido\Documents\GitHub\TP_Ferreteria_DAS\DAL\bin\Debug\DAL.dll
+C:\Users\Oppido\Documents\GitHub\TP_Ferreteria_DAS\DAL\bin\Debug\DAL.pdb
+C:\Users\Oppido\Documents\GitHub\TP_Ferreteria_DAS\DAL\bin\Debug\BE.dll
+C:\Users\Oppido\Documents\GitHub\TP_Ferreteria_DAS\DAL\bin\Debug\BE.pdb
+C:\Users\Oppido\Documents\GitHub\TP_Ferreteria_DAS\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Oppido\Documents\GitHub\TP_Ferreteria_DAS\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Oppido\Documents\GitHub\TP_Ferreteria_DAS\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\Oppido\Documents\GitHub\TP_Ferreteria_DAS\DAL\obj\Debug\DAL.dll
+C:\Users\Oppido\Documents\GitHub\TP_Ferreteria_DAS\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,34 @@
+# Carpetas de compilación
+bin/
+obj/
+Debug/
+Release/
+
+# Configuración de usuario de Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos de logs y temporales
+*.log
+*.tmp
+
+# Archivos de dependencias de paquetes
+packages/
+*.nupkg
+
+# Archivos de build automáticos
+project.lock.json
+project.fragment.lock.json
+
+# Archivos de VS Code (si usas)
+.vscode/
+
+# Archivos de Visual Studio específicos
+*.dbmdl
+*.jfm
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
