@@ -93,5 +93,10 @@ namespace Tp_DAS
         {
             Application.Exit();
         }
+
+        private void BtnAgregarClientes_Click(object sender, EventArgs e)
+        {
+            AbrirformulariosHijos(new AltaCliente());
+        }
     }
 }

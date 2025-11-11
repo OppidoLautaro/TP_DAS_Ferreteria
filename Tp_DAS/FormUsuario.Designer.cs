@@ -40,6 +40,7 @@
             this.labelFec = new System.Windows.Forms.Label();
             this.labelhor = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.BtnAgregarClientes = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MenuLateral.SuspendLayout();
@@ -100,10 +101,11 @@
             // 
             this.PanelSubMenú.AllowDrop = true;
             this.PanelSubMenú.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PanelSubMenú.Controls.Add(this.BtnAgregarClientes);
             this.PanelSubMenú.Controls.Add(this.BtnProductos);
             this.PanelSubMenú.Location = new System.Drawing.Point(0, 148);
             this.PanelSubMenú.Name = "PanelSubMenú";
-            this.PanelSubMenú.Size = new System.Drawing.Size(252, 48);
+            this.PanelSubMenú.Size = new System.Drawing.Size(252, 109);
             this.PanelSubMenú.TabIndex = 2;
             // 
             // BtnProductos
@@ -117,7 +119,7 @@
             this.BtnProductos.Location = new System.Drawing.Point(0, 0);
             this.BtnProductos.Name = "BtnProductos";
             this.BtnProductos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.BtnProductos.Size = new System.Drawing.Size(252, 48);
+            this.BtnProductos.Size = new System.Drawing.Size(252, 55);
             this.BtnProductos.TabIndex = 1;
             this.BtnProductos.Text = "Productos";
             this.BtnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -164,6 +166,24 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // BtnAgregarClientes
+            // 
+            this.BtnAgregarClientes.AllowDrop = true;
+            this.BtnAgregarClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnAgregarClientes.FlatAppearance.BorderSize = 0;
+            this.BtnAgregarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAgregarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregarClientes.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.BtnAgregarClientes.Location = new System.Drawing.Point(0, 55);
+            this.BtnAgregarClientes.Name = "BtnAgregarClientes";
+            this.BtnAgregarClientes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.BtnAgregarClientes.Size = new System.Drawing.Size(252, 54);
+            this.BtnAgregarClientes.TabIndex = 2;
+            this.BtnAgregarClientes.Text = "Alta Cliente";
+            this.BtnAgregarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAgregarClientes.UseVisualStyleBackColor = true;
+            this.BtnAgregarClientes.Click += new System.EventHandler(this.BtnAgregarClientes_Click);
+            // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,5 +221,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnmedia;
         private System.Windows.Forms.Button BtnProductos;
+        private System.Windows.Forms.Button BtnAgregarClientes;
     }
 }
