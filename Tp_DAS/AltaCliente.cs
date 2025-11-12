@@ -16,5 +16,12 @@ namespace Tp_DAS
         {
             InitializeComponent();
         }
+
+        private void AltaCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+    
     }
 }

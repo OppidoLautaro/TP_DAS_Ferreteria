@@ -40,30 +40,33 @@ namespace Tp_DAS
 
             if (usuario != null)
             {
-                
+                BE.Sesion.GetInstance().SetUsuario(usuario);
+
+                MessageBox.Show("Bienvenido " + usuario.Username);
 
                 if (usuario.Rol.NombreRol == "Admin")
                 {
-                    Form1 FormAdmin = new Form1(usuario);
-                    FormAdmin.Show();
+                    Form1 f = new Form1(usuario);
+                    f.Show();
                 }
                 else
                 {
-                    FormUsuario formUsuario = new FormUsuario(usuario);
-                    formUsuario.Show();
+                    FormUsuario Fvendedor = new FormUsuario(usuario);
+                    Fvendedor.Show();
                 }
+
                 this.Hide();
-                MessageBox.Show("Bienvenido " + usuario.Username);
             }
             else
             {
                 MessageBox.Show("Usuario o Contraseña Incorrectos");
             }
+
         }
 
         private void Form4_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

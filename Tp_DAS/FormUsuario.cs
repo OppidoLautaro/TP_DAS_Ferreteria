@@ -13,9 +13,11 @@ namespace Tp_DAS
 {
     public partial class FormUsuario : Form
     {
-        public FormUsuario(Usuario usuario)
+        private Usuario usuario;
+        public FormUsuario(Usuario u)
         {
             InitializeComponent();
+            usuario = u;
         }
 
         private void FormUsuario_Load(object sender, EventArgs e)
@@ -97,6 +99,15 @@ namespace Tp_DAS
         private void BtnAgregarClientes_Click(object sender, EventArgs e)
         {
             AbrirformulariosHijos(new AltaCliente());
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            BE.Sesion.GetInstance().SetUsuario(null);
+            Form4 login = new Form4();
+            login.Show();
+
+            this.Close();
         }
     }
 }

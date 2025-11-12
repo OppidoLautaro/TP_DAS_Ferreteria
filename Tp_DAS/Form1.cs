@@ -13,10 +13,12 @@ namespace Tp_DAS
 {
     public partial class Form1 : Form
     {
+        private Usuario usuario;
         public Form1(Usuario u)
         {
             InitializeComponent();
             perzonalizarDiseño();
+            usuario = u;
 
         }
 
@@ -123,6 +125,16 @@ namespace Tp_DAS
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            BE.Sesion.GetInstance().SetUsuario(null);
+            Form4 login = new Form4();
+            login.Show();
+
+            this.Close();
+            
         }
     }
 }

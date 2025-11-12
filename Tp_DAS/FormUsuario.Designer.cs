@@ -35,12 +35,13 @@
             this.MenuLateral = new System.Windows.Forms.Panel();
             this.btnmedia = new System.Windows.Forms.Button();
             this.PanelSubMenú = new System.Windows.Forms.Panel();
+            this.BtnAgregarClientes = new System.Windows.Forms.Button();
             this.BtnProductos = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelFec = new System.Windows.Forms.Label();
             this.labelhor = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.BtnAgregarClientes = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MenuLateral.SuspendLayout();
@@ -72,6 +73,7 @@
             // MenuLateral
             // 
             this.MenuLateral.BackColor = System.Drawing.Color.Black;
+            this.MenuLateral.Controls.Add(this.btnLogOut);
             this.MenuLateral.Controls.Add(this.btnmedia);
             this.MenuLateral.Controls.Add(this.PanelSubMenú);
             this.MenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
@@ -107,6 +109,24 @@
             this.PanelSubMenú.Name = "PanelSubMenú";
             this.PanelSubMenú.Size = new System.Drawing.Size(252, 109);
             this.PanelSubMenú.TabIndex = 2;
+            // 
+            // BtnAgregarClientes
+            // 
+            this.BtnAgregarClientes.AllowDrop = true;
+            this.BtnAgregarClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnAgregarClientes.FlatAppearance.BorderSize = 0;
+            this.BtnAgregarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAgregarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregarClientes.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.BtnAgregarClientes.Location = new System.Drawing.Point(0, 55);
+            this.BtnAgregarClientes.Name = "BtnAgregarClientes";
+            this.BtnAgregarClientes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.BtnAgregarClientes.Size = new System.Drawing.Size(252, 54);
+            this.BtnAgregarClientes.TabIndex = 2;
+            this.BtnAgregarClientes.Text = "Alta Cliente";
+            this.BtnAgregarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAgregarClientes.UseVisualStyleBackColor = true;
+            this.BtnAgregarClientes.Click += new System.EventHandler(this.BtnAgregarClientes_Click);
             // 
             // BtnProductos
             // 
@@ -166,23 +186,15 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // BtnAgregarClientes
+            // btnLogOut
             // 
-            this.BtnAgregarClientes.AllowDrop = true;
-            this.BtnAgregarClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnAgregarClientes.FlatAppearance.BorderSize = 0;
-            this.BtnAgregarClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAgregarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregarClientes.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.BtnAgregarClientes.Location = new System.Drawing.Point(0, 55);
-            this.BtnAgregarClientes.Name = "BtnAgregarClientes";
-            this.BtnAgregarClientes.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.BtnAgregarClientes.Size = new System.Drawing.Size(252, 54);
-            this.BtnAgregarClientes.TabIndex = 2;
-            this.BtnAgregarClientes.Text = "Alta Cliente";
-            this.BtnAgregarClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregarClientes.UseVisualStyleBackColor = true;
-            this.BtnAgregarClientes.Click += new System.EventHandler(this.BtnAgregarClientes_Click);
+            this.btnLogOut.Location = new System.Drawing.Point(3, 812);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(86, 32);
+            this.btnLogOut.TabIndex = 3;
+            this.btnLogOut.Text = "LogOut";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // FormUsuario
             // 
@@ -222,5 +234,6 @@
         private System.Windows.Forms.Button btnmedia;
         private System.Windows.Forms.Button BtnProductos;
         private System.Windows.Forms.Button BtnAgregarClientes;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }

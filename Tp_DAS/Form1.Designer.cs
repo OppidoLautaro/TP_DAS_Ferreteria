@@ -42,6 +42,7 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.MenuLateral.SuspendLayout();
             this.PanelSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -52,6 +53,7 @@
             // MenuLateral
             // 
             this.MenuLateral.BackColor = System.Drawing.Color.Black;
+            this.MenuLateral.Controls.Add(this.btnLogOut);
             this.MenuLateral.Controls.Add(this.PanelSubMenu);
             this.MenuLateral.Controls.Add(this.btnMedia);
             this.MenuLateral.Controls.Add(this.panel1);
@@ -194,6 +196,17 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.ForeColor = System.Drawing.Color.Black;
+            this.btnLogOut.Location = new System.Drawing.Point(12, 912);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(96, 40);
+            this.btnLogOut.TabIndex = 3;
+            this.btnLogOut.Text = "LogOut";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -237,6 +250,7 @@
         private System.Windows.Forms.Label labelFecha;
         private System.Windows.Forms.Label labelhora;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }
 
