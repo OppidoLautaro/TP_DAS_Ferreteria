@@ -30,7 +30,9 @@ namespace Tp_DAS
             dataGridView1.DataSource = productoBLL.ListarProductos();
         }
 
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

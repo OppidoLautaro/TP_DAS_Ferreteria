@@ -103,6 +103,7 @@ namespace Tp_DAS
             panelContenedor.Tag = formHijo;
             formHijo.BringToFront();
             formHijo.Show();
+            formHijo.Dock = DockStyle.Fill;
         }
 
         private void labelhora_Click(object sender, EventArgs e)
