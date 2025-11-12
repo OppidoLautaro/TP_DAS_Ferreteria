@@ -99,11 +99,11 @@ namespace Tp_DAS
             formHijo.TopLevel = false;
             formHijo.FormBorderStyle = FormBorderStyle.None;
             formHijo.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Clear();
             panelContenedor.Controls.Add(formHijo);
             panelContenedor.Tag = formHijo;
             formHijo.BringToFront();
             formHijo.Show();
-            formHijo.Dock = DockStyle.Fill;
         }
 
         private void labelhora_Click(object sender, EventArgs e)

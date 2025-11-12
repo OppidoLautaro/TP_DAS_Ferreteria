@@ -23,7 +23,7 @@ namespace DAL
 
             int fa = acceso.Escribir("StockProducto",sqlParameters);
 
-            return 0;
+            return fa;
         }
 
         public List<BE.Producto> ListarProductos()
@@ -46,6 +46,18 @@ namespace DAL
             return lista;
         }
 
+        public int RestarStockProdu(int idProducto, int stock)
+        {
+            Producto producto = new Producto();
+
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@IDProducto", idProducto);
+            sqlParameters[1] = new SqlParameter("@Stock", stock);
+
+            int fa = acceso.Escribir("ActualizarStock", sqlParameters);
+
+            return fa;
+        }
 
     }
 }

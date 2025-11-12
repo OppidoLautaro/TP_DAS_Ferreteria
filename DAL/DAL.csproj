@@ -44,6 +44,7 @@
     <Compile Include="Acceso.cs" />
     <Compile Include="MP_Producto.cs" />
     <Compile Include="MP_Usuario.cs" />
+    <Compile Include="MP_Ventas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

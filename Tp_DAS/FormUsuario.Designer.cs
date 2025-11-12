@@ -53,10 +53,10 @@
             // 
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panelContenedor.Controls.Add(this.pictureBox1);
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelContenedor.Location = new System.Drawing.Point(252, 0);
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(0, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(852, 847);
+            this.panelContenedor.Size = new System.Drawing.Size(1245, 848);
             this.panelContenedor.TabIndex = 3;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
@@ -64,7 +64,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::Tp_DAS.Properties.Resources.s;
-            this.pictureBox1.Location = new System.Drawing.Point(245, 238);
+            this.pictureBox1.Location = new System.Drawing.Point(553, 243);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(388, 320);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -80,17 +80,22 @@
             this.MenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuLateral.Location = new System.Drawing.Point(0, 0);
             this.MenuLateral.Name = "MenuLateral";
-            this.MenuLateral.Size = new System.Drawing.Size(252, 847);
+            this.MenuLateral.Size = new System.Drawing.Size(252, 848);
             this.MenuLateral.TabIndex = 4;
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(3, 812);
+            this.btnLogOut.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Location = new System.Drawing.Point(0, 811);
+            this.btnLogOut.MaximumSize = new System.Drawing.Size(86, 37);
+            this.btnLogOut.MinimumSize = new System.Drawing.Size(86, 37);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(86, 32);
+            this.btnLogOut.Size = new System.Drawing.Size(86, 37);
             this.btnLogOut.TabIndex = 3;
             this.btnLogOut.Text = "LogOut";
-            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnmedia
@@ -163,9 +168,9 @@
             this.panel2.Controls.Add(this.labelFec);
             this.panel2.Controls.Add(this.labelhor);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(252, 791);
+            this.panel2.Location = new System.Drawing.Point(252, 792);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(0, 56);
+            this.panel2.Size = new System.Drawing.Size(993, 56);
             this.panel2.TabIndex = 5;
             // 
             // labelFec
@@ -174,7 +179,7 @@
             this.labelFec.AutoSize = true;
             this.labelFec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelFec.Location = new System.Drawing.Point(-67, 27);
+            this.labelFec.Location = new System.Drawing.Point(926, 27);
             this.labelFec.Name = "labelFec";
             this.labelFec.Size = new System.Drawing.Size(41, 15);
             this.labelFec.TabIndex = 1;
@@ -186,7 +191,7 @@
             this.labelhor.AutoSize = true;
             this.labelhor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelhor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelhor.Location = new System.Drawing.Point(-67, 7);
+            this.labelhor.Location = new System.Drawing.Point(926, 7);
             this.labelhor.Name = "labelhor";
             this.labelhor.Size = new System.Drawing.Size(41, 15);
             this.labelhor.TabIndex = 0;
@@ -201,7 +206,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 847);
+            this.ClientSize = new System.Drawing.Size(1245, 848);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.MenuLateral);
             this.Controls.Add(this.panelContenedor);

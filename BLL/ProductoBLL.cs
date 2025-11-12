@@ -21,5 +21,10 @@ namespace BLL
         { 
             return mP.ListarProductos();
         }
+
+        public int RestarStockProdu(int idProducto, int stock)
+        {
+            return mP.RestarStockProdu(idProducto, stock);
+        }
     }
 }

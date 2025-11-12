@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.MenuLateral = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.PanelSubMenu = new System.Windows.Forms.Panel();
             this.BtnVentas = new System.Windows.Forms.Button();
             this.BtnStock = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnLogOut = new System.Windows.Forms.Button();
             this.MenuLateral.SuspendLayout();
             this.PanelSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -62,6 +62,22 @@
             this.MenuLateral.Name = "MenuLateral";
             this.MenuLateral.Size = new System.Drawing.Size(250, 961);
             this.MenuLateral.TabIndex = 0;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.Black;
+            this.btnLogOut.Location = new System.Drawing.Point(3, 918);
+            this.btnLogOut.MaximumSize = new System.Drawing.Size(86, 37);
+            this.btnLogOut.MinimumSize = new System.Drawing.Size(86, 37);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(86, 37);
+            this.btnLogOut.TabIndex = 3;
+            this.btnLogOut.Text = "LogOut";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // PanelSubMenu
             // 
@@ -176,7 +192,7 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(250, 0);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1034, 905);
+            this.panelContenedor.Size = new System.Drawing.Size(1034, 961);
             this.panelContenedor.TabIndex = 2;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
@@ -184,7 +200,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::Tp_DAS.Properties.Resources.s;
-            this.pictureBox1.Location = new System.Drawing.Point(348, 260);
+            this.pictureBox1.Location = new System.Drawing.Point(348, 288);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(388, 320);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -196,17 +212,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnLogOut
-            // 
-            this.btnLogOut.ForeColor = System.Drawing.Color.Black;
-            this.btnLogOut.Location = new System.Drawing.Point(12, 912);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(96, 40);
-            this.btnLogOut.TabIndex = 3;
-            this.btnLogOut.Text = "LogOut";
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -214,8 +219,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1284, 961);
-            this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.MenuLateral);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.MenuBar;

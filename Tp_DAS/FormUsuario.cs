@@ -43,6 +43,7 @@ namespace Tp_DAS
             formHijo.TopLevel = false;
             formHijo.FormBorderStyle = FormBorderStyle.None;
             formHijo.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Clear();
             panelContenedor.Controls.Add(formHijo);
             panelContenedor.Tag = formHijo;
             formHijo.BringToFront();
