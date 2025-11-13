@@ -11,10 +11,10 @@ using BE;
 
 namespace Tp_DAS
 {
-    public partial class Form1 : Form
+    public partial class FormAdmin : Form
     {
         private Usuario usuario;
-        public Form1(Usuario u)
+        public FormAdmin(Usuario u)
         {
             InitializeComponent();
             perzonalizarDiseño();
@@ -131,7 +131,7 @@ namespace Tp_DAS
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             BE.Sesion.GetInstance().SetUsuario(null);
-            Form4 login = new Form4();
+            FormLogin login = new FormLogin();
             login.Show();
 
             this.Close();

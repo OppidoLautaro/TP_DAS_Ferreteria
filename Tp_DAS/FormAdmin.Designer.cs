@@ -1,6 +1,6 @@
 ﻿namespace Tp_DAS
 {
-    partial class Form1
+    partial class FormAdmin
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
             this.MenuLateral = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.PanelSubMenu = new System.Windows.Forms.Panel();
@@ -212,7 +212,7 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Form1
+            // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -227,8 +227,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1300, 1000);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormAdmin";
+            this.Text = "Formulario Admin";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MenuLateral.ResumeLayout(false);
             this.PanelSubMenu.ResumeLayout(false);
