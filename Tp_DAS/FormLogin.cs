@@ -12,10 +12,10 @@ using BLL;
 
 namespace Tp_DAS
 {
-    public partial class Form4 : Form
+    public partial class FormLogin : Form
     {
         UsuarioBLL usuarioBLL = new UsuarioBLL();
-        public Form4()
+        public FormLogin()
         {
             InitializeComponent();
         }
@@ -46,12 +46,12 @@ namespace Tp_DAS
 
                 if (usuario.Rol.NombreRol == "Admin")
                 {
-                    Form1 f = new Form1(usuario);
+                    FormAdmin f = new FormAdmin(usuario);
                     f.Show();
                 }
                 else
                 {
-                    FormUsuario Fvendedor = new FormUsuario(usuario);
+                    FormVendedor Fvendedor = new FormVendedor(usuario);
                     Fvendedor.Show();
                 }
 

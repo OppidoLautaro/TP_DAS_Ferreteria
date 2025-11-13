@@ -11,10 +11,10 @@ using BE;
 
 namespace Tp_DAS
 {
-    public partial class FormUsuario : Form
+    public partial class FormVendedor : Form
     {
         private Usuario usuario;
-        public FormUsuario(Usuario u)
+        public FormVendedor(Usuario u)
         {
             InitializeComponent();
             usuario = u;
@@ -105,10 +105,15 @@ namespace Tp_DAS
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             BE.Sesion.GetInstance().SetUsuario(null);
-            Form4 login = new Form4();
+            FormLogin login = new FormLogin();
             login.Show();
 
             this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
