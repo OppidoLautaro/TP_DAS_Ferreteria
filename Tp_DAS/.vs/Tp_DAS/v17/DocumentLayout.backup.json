@@ -3,17 +3,17 @@
   "WorkspaceRootPath": "C:\\Users\\Oppido\\Documents\\GitHub\\TP_DAS_Ferreteria\\Tp_DAS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5DA92657-D95D-4B6F-A1EC-74889008C2F8}|..\\DAL\\DAL.csproj|c:\\users\\oppido\\documents\\github\\tp_das_ferreteria\\dal\\mp_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{22DAA123-2BE8-46C2-8EE5-B36B5B31FC7A}|..\\BE\\BE.csproj|c:\\users\\oppido\\documents\\github\\tp_das_ferreteria\\be\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E591C71B-8564-4578-B006-E115350CF33D}|Tp_DAS.csproj|c:\\users\\oppido\\documents\\github\\tp_das_ferreteria\\tp_das\\altacliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E591C71B-8564-4578-B006-E115350CF33D}|Tp_DAS.csproj|solutionrelative:altacliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{29DC8FF6-B57B-4AA1-AFC6-4D3A84FE89B0}|..\\BLL\\BLL.csproj|c:\\users\\oppido\\documents\\github\\tp_das_ferreteria\\bll\\clientebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DA92657-D95D-4B6F-A1EC-74889008C2F8}|..\\DAL\\DAL.csproj|c:\\users\\oppido\\documents\\github\\tp_das_ferreteria\\dal\\mp_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22DAA123-2BE8-46C2-8EE5-B36B5B31FC7A}|..\\BE\\BE.csproj|c:\\users\\oppido\\documents\\github\\tp_das_ferreteria\\be\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E591C71B-8564-4578-B006-E115350CF33D}|Tp_DAS.csproj|c:\\users\\oppido\\documents\\github\\tp_das_ferreteria\\tp_das\\altacliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -27,56 +27,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AltaCliente.cs",
               "DocumentMoniker": "C:\\Users\\Oppido\\Documents\\GitHub\\TP_DAS_Ferreteria\\Tp_DAS\\AltaCliente.cs",
               "RelativeDocumentMoniker": "AltaCliente.cs",
               "ToolTip": "C:\\Users\\Oppido\\Documents\\GitHub\\TP_DAS_Ferreteria\\Tp_DAS\\AltaCliente.cs",
               "RelativeToolTip": "AltaCliente.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACcAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T20:27:08.055Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\Oppido\\Documents\\GitHub\\TP_DAS_Ferreteria\\BE\\Cliente.cs",
               "RelativeDocumentMoniker": "..\\BE\\Cliente.cs",
               "ToolTip": "C:\\Users\\Oppido\\Documents\\GitHub\\TP_DAS_Ferreteria\\BE\\Cliente.cs",
               "RelativeToolTip": "..\\BE\\Cliente.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAIwCwAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T20:21:39.819Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MP_Cliente.cs",
               "DocumentMoniker": "C:\\Users\\Oppido\\Documents\\GitHub\\TP_DAS_Ferreteria\\DAL\\MP_Cliente.cs",
               "RelativeDocumentMoniker": "..\\DAL\\MP_Cliente.cs",
-              "ToolTip": "C:\\Users\\Oppido\\Documents\\GitHub\\TP_DAS_Ferreteria\\DAL\\MP_Cliente.cs*",
-              "RelativeToolTip": "..\\DAL\\MP_Cliente.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAqAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Oppido\\Documents\\GitHub\\TP_DAS_Ferreteria\\DAL\\MP_Cliente.cs",
+              "RelativeToolTip": "..\\DAL\\MP_Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T20:23:18.543Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ClienteBLL.cs",
               "DocumentMoniker": "C:\\Users\\Oppido\\Documents\\GitHub\\TP_DAS_Ferreteria\\BLL\\ClienteBLL.cs",
               "RelativeDocumentMoniker": "..\\BLL\\ClienteBLL.cs",
               "ToolTip": "C:\\Users\\Oppido\\Documents\\GitHub\\TP_DAS_Ferreteria\\BLL\\ClienteBLL.cs",
               "RelativeToolTip": "..\\BLL\\ClienteBLL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T20:25:37.32Z",
               "EditorCaption": ""

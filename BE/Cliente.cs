@@ -8,13 +8,7 @@ namespace BE
 {
     public class Cliente
     {
-		private int idCliente;
 
-		public int IDCliente
-		{
-			get { return idCliente; }
-			set { idCliente = value; }
-		}
 
 		private string nombre;
 
