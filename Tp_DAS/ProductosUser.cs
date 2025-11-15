@@ -97,16 +97,15 @@ namespace Tp_DAS
             carrito.Clear();
             listBoxCarrito.Items.Clear();
             lblTotal.Text = "$0";
-            ActualizarDGV();
+          
 
             //
-            if (!int.TryParse(txtIdProducto.Text, out int id))
-            {
-                MessageBox.Show("ID inválido.");
-                return;
-            }
 
-            if (!int.TryParse(txtCantidadProdu.Text, out int cantidad) || cantidad <= 0)
+            int id = int.Parse(txtIdProducto.Text);
+            int cantidad = int.Parse(txtCantidadProdu.Text);
+
+
+            if (cantidad <= 0)
             {
                 MessageBox.Show("Cantidad inválida.");
                 return;
@@ -121,7 +120,9 @@ namespace Tp_DAS
 
 
             var item = new ProduCarrito { Producto = prod, Cantidad = cantidad };
-            ventasBLL.RestarStockProdu(id,cantidad );
+
+            ventasBLL.RestarStockProdu(id, cantidad );
+            ActualizarDGV();
         }
     }
     
