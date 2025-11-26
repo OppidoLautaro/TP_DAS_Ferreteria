@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -27,5 +28,32 @@ namespace DAL
             fa = acc.Escribir("AltaCliente", parameters);
             return fa;
         }
+
+
+        public List<BE.Cliente> ListarClientes() 
+        { 
+            List<BE.Cliente> ls = new List<BE.Cliente>();
+
+            DataTable dt = acc.Leer("ListarClientes", null);
+
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                BE.Cliente cliente = new BE.Cliente();
+
+                cliente.Apellido = dr["Apellido"].ToString();
+                cliente.Nombre = dr["Nombre"].ToString();
+                cliente.DNI = dr["DNI"].ToString();
+                cliente.Email = dr["Email"].ToString();
+                cliente.Telefono = dr["Telefono"].ToString();
+                cliente.Direccion = dr["Direccion"].ToString();
+                
+                ls.Add(cliente);
+            } 
+
+
+            return ls;
+        }
+
     }
 }

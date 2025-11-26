@@ -16,5 +16,10 @@ namespace BLL
         {
             return mapper.AltaCliente(c);
         }
+
+        public List<BE.Cliente> ListarClientes()
+        {
+            return mapper.ListarClientes();
+        }
     }
 }

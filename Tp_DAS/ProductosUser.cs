@@ -38,6 +38,12 @@ namespace Tp_DAS
             List<ProduCarrito> carrito = new List<ProduCarrito>();
         }
 
+        public void LimpiarTextboxs()
+        {
+            txtIdProducto.Clear();
+            txtCantidadProdu.Clear();
+        }
+
         public void ActualizarDGV()
         {
             listaProductos = productoBLL.ListarProductos();
@@ -71,6 +77,7 @@ namespace Tp_DAS
             listBoxCarrito.Items.Add(item);
             total += item.Subtotal;
             lblTotal.Text = $"${total}";
+            LimpiarTextboxs();
 
         }
 
@@ -92,12 +99,13 @@ namespace Tp_DAS
 
             int idVenta = ventasBLL.RegistrarVenta(venta, detalles);
 
-            MessageBox.Show("Venta registrada correctamente. ID Venta: " + idVenta);
+            MessageBox.Show("Venta registrada correctamente. Numero de Venta: " + idVenta);
 
             carrito.Clear();
             listBoxCarrito.Items.Clear();
             lblTotal.Text = "$0";
-          
+            LimpiarTextboxs();
+            
 
             //
 
