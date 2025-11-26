@@ -58,5 +58,24 @@ namespace DAL
 
             return ls;
         }
+
+        public DataTable ObtenerVenta(int idVenta)
+        {
+            SqlParameter[] parameters = new SqlParameter[1];
+
+            parameters[0] = new SqlParameter("id", idVenta);
+
+            return acceso.Leer("P_ObtenerVenta", parameters);
+        }
+
+        public DataTable ObtenerDetallesVenta(int idVenta)
+        {
+            SqlParameter[] parameters = new SqlParameter[1];
+
+            parameters[0] = new SqlParameter("id", idVenta);
+
+            return acceso.Leer("P_ObtenerDetallesVenta", parameters);
+        }
+
     }
 }
