@@ -21,5 +21,6 @@ namespace BLL
         {
             return mapper.ListarClientes();
         }
+        //constructor xa cuando se da de alta un cliente o producto
     }
 }

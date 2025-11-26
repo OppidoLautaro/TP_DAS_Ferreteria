@@ -43,3 +43,12 @@ C:\Users\Usuario\Documents\GitHub\TP_DAS_Ferreteria\DAL\obj\Debug\DAL.csproj.Cor
 C:\Users\Usuario\Documents\GitHub\TP_DAS_Ferreteria\DAL\obj\Debug\DAL.csproj.Up2Date
 C:\Users\Usuario\Documents\GitHub\TP_DAS_Ferreteria\DAL\obj\Debug\DAL.dll
 C:\Users\Usuario\Documents\GitHub\TP_DAS_Ferreteria\DAL\obj\Debug\DAL.pdb
+D:\Documents\GitHub\TP_DAS_Ferreteria\DAL\bin\Debug\DAL.dll
+D:\Documents\GitHub\TP_DAS_Ferreteria\DAL\bin\Debug\DAL.pdb
+D:\Documents\GitHub\TP_DAS_Ferreteria\DAL\bin\Debug\BE.dll
+D:\Documents\GitHub\TP_DAS_Ferreteria\DAL\bin\Debug\BE.pdb
+D:\Documents\GitHub\TP_DAS_Ferreteria\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Documents\GitHub\TP_DAS_Ferreteria\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\TP_DAS_Ferreteria\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\Documents\GitHub\TP_DAS_Ferreteria\DAL\obj\Debug\DAL.dll
+D:\Documents\GitHub\TP_DAS_Ferreteria\DAL\obj\Debug\DAL.pdb

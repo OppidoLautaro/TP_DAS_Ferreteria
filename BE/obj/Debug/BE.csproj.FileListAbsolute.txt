@@ -28,3 +28,9 @@ C:\Users\Usuario\Documents\GitHub\TP_DAS_Ferreteria\BE\obj\Debug\BE.csproj.Assem
 C:\Users\Usuario\Documents\GitHub\TP_DAS_Ferreteria\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Documents\GitHub\TP_DAS_Ferreteria\BE\obj\Debug\BE.dll
 C:\Users\Usuario\Documents\GitHub\TP_DAS_Ferreteria\BE\obj\Debug\BE.pdb
+D:\Documents\GitHub\TP_DAS_Ferreteria\BE\bin\Debug\BE.dll
+D:\Documents\GitHub\TP_DAS_Ferreteria\BE\bin\Debug\BE.pdb
+D:\Documents\GitHub\TP_DAS_Ferreteria\BE\obj\Debug\BE.csproj.AssemblyReference.cache
+D:\Documents\GitHub\TP_DAS_Ferreteria\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\TP_DAS_Ferreteria\BE\obj\Debug\BE.dll
+D:\Documents\GitHub\TP_DAS_Ferreteria\BE\obj\Debug\BE.pdb

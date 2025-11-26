@@ -39,7 +39,8 @@ namespace Tp_DAS
 
             
             BE.Cliente cliente = new BE.Cliente();
-
+            //NO HAY QUE CREAR ASI EL CLIENTE BE.Cliente cliente = new BE.Cliente();
+            //BE.Cliente cliente = new BE.Cliente(CONSTRUCTOR);
             cliente.Nombre = txtNombreCliente.Text;
             cliente.Apellido = txtApellidoCliente.Text;
             cliente.DNI = txtbDNI.Text;
