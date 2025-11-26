@@ -80,7 +80,7 @@
             this.listBoxCarrito.FormattingEnabled = true;
             this.listBoxCarrito.Location = new System.Drawing.Point(596, 52);
             this.listBoxCarrito.Name = "listBoxCarrito";
-            this.listBoxCarrito.Size = new System.Drawing.Size(139, 160);
+            this.listBoxCarrito.Size = new System.Drawing.Size(157, 160);
             this.listBoxCarrito.TabIndex = 3;
             // 
             // label1Carrito

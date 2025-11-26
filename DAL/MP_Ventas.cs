@@ -11,32 +11,28 @@ namespace DAL
 {
     public class MP_Ventas
     {
-        Acceso acceso = new Acceso(); // tu clase de acceso a BD
+        Acceso acceso = new Acceso();
 
         public int RegistrarVenta(Venta venta)
         {
-            SqlParameter[] parameters = new SqlParameter[4];
+            SqlParameter[] sqlParameters = new SqlParameter[3];
+            sqlParameters[0] = new SqlParameter("@FechaVenta", venta.FechaVenta);
+            sqlParameters[1] = new SqlParameter("@MontoTotal", venta.MontoTotal);
+            sqlParameters[2] = new SqlParameter("@IDCliente", venta.IDCliente);
 
-            parameters[0] = new SqlParameter("@FechaVenta", venta.FechaVenta);
-            parameters[1] = new SqlParameter("@MontoTotal", venta.MontoTotal);
-            parameters[2] = new SqlParameter("@IDCliente", venta.IDCliente);
+            DataTable dt = acceso.Leer("P_RegistrarVenta", sqlParameters);
 
-            SqlParameter outputParam = new SqlParameter("@IDVenta", SqlDbType.Int);
-            outputParam.Direction = ParameterDirection.Output;
-            parameters[3] = outputParam;
-
-            acceso.Escribir("P_RegistrarVenta", parameters);
-
-            return Convert.ToInt32(outputParam.Value);
+            return Convert.ToInt32(dt.Rows[0]["IDVenta"]);
         }
 
         public int RegistrarDetalle(DetalleVenta detalle)
         {
-            SqlParameter[] parameters = new SqlParameter[3];
+            SqlParameter[] parameters = new SqlParameter[4];
 
-            parameters[0] = new SqlParameter("@IDProducto", detalle.IDProducto);
-            parameters[1] = new SqlParameter("@Cantidad", detalle.Cantidad);
-            parameters[2] = new SqlParameter("@PrecioUnitario", detalle.PrecioUnitario);
+            parameters[0] = new SqlParameter("@IDVenta", detalle.IdVenta);
+            parameters[1] = new SqlParameter("@IDProducto", detalle.IDProducto);
+            parameters[2] = new SqlParameter("@Cantidad", detalle.Cantidad);
+            parameters[3] = new SqlParameter("@PrecioUnitario", detalle.PrecioUnitario);
 
             return acceso.Escribir("P_RegistrarDetalleVenta", parameters);
         }
