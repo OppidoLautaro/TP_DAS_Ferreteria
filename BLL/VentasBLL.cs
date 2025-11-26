@@ -13,11 +13,18 @@ namespace BLL
         MP_Ventas mP = new MP_Ventas();
         MP_Producto mProduct = new MP_Producto();
 
+
+        public List<Venta> listarVentas()
+        {
+            return mP.ListarVentas();
+        }
+
+
         public int RegistrarVenta(Venta venta, List<DetalleVenta> detalles)
         {
             int idVenta = mP.RegistrarVenta(venta);
 
-            foreach (var detalle in detalles)
+            foreach (DetalleVenta detalle in detalles)
             {
                 detalle.IdVenta = idVenta;
                 mP.RegistrarDetalle(detalle);
@@ -32,6 +39,5 @@ namespace BLL
             return idproducto;
         }
     }
-    
     
 }

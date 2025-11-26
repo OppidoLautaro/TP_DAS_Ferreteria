@@ -54,7 +54,7 @@ namespace DAL
             sqlParameters[0] = new SqlParameter("@IDProducto", idProducto);
             sqlParameters[1] = new SqlParameter("@CantidadVendida", stock);
 
-            int fa = acceso.Escribir("ActualizarStock", sqlParameters);
+            int fa = acceso.Escribir("RestarStockProducto", sqlParameters);
 
             return fa;
         }

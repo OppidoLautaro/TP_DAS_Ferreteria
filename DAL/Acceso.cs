@@ -16,7 +16,7 @@ namespace DAL
 
         public void Conectar()
         {
-            cn.ConnectionString = @"Data Source=.;Initial Catalog=TPFerreteria;Integrated Security=True;Encrypt=False;";
+            cn.ConnectionString = @"Data Source=.;Initial Catalog=TPFerreteria;Integrated Security=True;Encrypt=False";
             cn.Open();
         }
 

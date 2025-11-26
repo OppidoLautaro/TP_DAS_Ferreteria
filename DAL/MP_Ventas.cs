@@ -15,30 +15,48 @@ namespace DAL
 
         public int RegistrarVenta(Venta venta)
         {
-            SqlParameter[] parameters = new SqlParameter[4];
+            SqlParameter[] sqlParameters = new SqlParameter[3];
 
-            parameters[0] = new SqlParameter("@FechaVenta", venta.FechaVenta);
-            parameters[1] = new SqlParameter("@MontoTotal", venta.MontoTotal);
-            parameters[2] = new SqlParameter("@IDCliente", venta.IDCliente);
+            sqlParameters[0] = new SqlParameter("@FechaVenta", venta.FechaVenta);
+            sqlParameters[1] = new SqlParameter("@MontoTotal", venta.MontoTotal);
+            sqlParameters[2] = new SqlParameter("@IDCliente", venta.IDCliente);
+            
+            DataTable dt = acceso.Leer("P_RegistrarVenta", sqlParameters);
 
-            SqlParameter outputParam = new SqlParameter("@IDVenta", SqlDbType.Int);
-            outputParam.Direction = ParameterDirection.Output;
-            parameters[3] = outputParam;
-
-            acceso.Escribir("P_RegistrarVenta", parameters);
-
-            return Convert.ToInt32(outputParam.Value);
+            return Convert.ToInt32(dt.Rows[0]["IDVenta"]);
         }
 
         public int RegistrarDetalle(DetalleVenta detalle)
         {
-            SqlParameter[] parameters = new SqlParameter[3];
+            SqlParameter[] parameters = new SqlParameter[4];
 
-            parameters[0] = new SqlParameter("@IDProducto", detalle.IDProducto);
-            parameters[1] = new SqlParameter("@Cantidad", detalle.Cantidad);
-            parameters[2] = new SqlParameter("@PrecioUnitario", detalle.PrecioUnitario);
+            parameters[0] = new SqlParameter("@IDVenta", detalle.IdVenta);
+            parameters[1] = new SqlParameter("@IDProducto", detalle.IDProducto);
+            parameters[2] = new SqlParameter("@Cantidad", detalle.Cantidad);
+            parameters[3] = new SqlParameter("@PrecioUnitario", detalle.PrecioUnitario);
 
             return acceso.Escribir("P_RegistrarDetalleVenta", parameters);
+        }
+
+        public List<Venta> ListarVentas()
+        {
+            List<Venta> ls = new List<Venta>();
+
+            DataTable dt = acceso.Leer("ListarVentas",null);
+
+            foreach (DataRow dr in dt.Rows) 
+            { 
+                Venta venta = new Venta();
+
+                venta.IDVenta= Convert.ToInt32(dr["IDVenta"]);
+                venta.FechaVenta = Convert.ToDateTime(dr["FechaVenta"]);
+                venta.IDCliente = Convert.ToInt32(dr["IDCliente"]);
+                venta.MontoTotal = Convert.ToDecimal(dr["MontoTotal"]);
+
+                ls.Add(venta);
+            }
+
+            return ls;
         }
     }
 }

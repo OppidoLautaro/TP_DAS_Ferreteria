@@ -41,6 +41,7 @@ namespace DAL
             {
                 BE.Cliente cliente = new BE.Cliente();
 
+                cliente.Id = Convert.ToInt32(dr["IDCliente"]);
                 cliente.Apellido = dr["Apellido"].ToString();
                 cliente.Nombre = dr["Nombre"].ToString();
                 cliente.DNI = dr["DNI"].ToString();

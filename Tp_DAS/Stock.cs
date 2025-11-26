@@ -19,7 +19,23 @@ namespace Tp_DAS
         public Stock()
         {
             InitializeComponent();
-            
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is Label)
+                    ctrl.ForeColor = Color.Black;
+
+                if (ctrl is TextBox)
+                {
+                    ctrl.ForeColor = Color.Black;
+                    ctrl.BackColor = Color.White;
+                }
+
+                if (ctrl is Button)
+                {
+                    ctrl.ForeColor = Color.Black;
+                    ctrl.BackColor = Color.White;
+                }
+            }
         }
 
         private void Stock_Load(object sender, EventArgs e)

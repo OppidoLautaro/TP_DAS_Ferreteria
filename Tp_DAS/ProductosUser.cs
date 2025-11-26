@@ -23,19 +23,27 @@ namespace Tp_DAS
         VentasBLL ventasBLL = new VentasBLL();
         List<BE.Producto> listaProductos = new List<BE.Producto>();
         List<ProduCarrito> carrito = new List<ProduCarrito>();
+        ClienteBLL c = new ClienteBLL();
         decimal total = 0;
 
         private void ProductosUser_Load(object sender, EventArgs e)
         {
-            if (listBoxCarrito.Items.Count == 0)
-            {
-                listBoxCarrito.Text = "Vacio";
-            }
+            RefrescarCarrito();
 
             ActualizarDGV();
 
+            CargarClientes();
 
             List<ProduCarrito> carrito = new List<ProduCarrito>();
+        }
+
+        private void CargarClientes()
+        {
+            var lista = c.ListarClientes();
+
+            cmbClientes.DataSource = lista;
+            cmbClientes.DisplayMember = "ComboBox";  // lo que ve el usuario
+            cmbClientes.ValueMember = "Id";  // lo que se usa internamente
         }
 
         public void LimpiarTextboxs()
@@ -52,7 +60,8 @@ namespace Tp_DAS
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            // 1. Validar que la cantidad tenga solo números usando el Regex del UserControl
+
+            // VALIDAR CANTIDAD (CON USER CONTROL)
             string cantidadTexto = userControl21.CantidadTexto;
 
             if (!userControl21.ValidaRegex(cantidadTexto))
@@ -62,88 +71,106 @@ namespace Tp_DAS
             }
 
             int cantidad = int.Parse(cantidadTexto);
-
             if (cantidad <= 0)
             {
                 MessageBox.Show("La cantidad debe ser mayor a 0.");
                 return;
             }
 
-            // 2. Validar ID
+            // VALIDAR ID PRODUCTO
             if (!int.TryParse(txtIdProducto.Text, out int id))
             {
                 MessageBox.Show("ID inválido.");
                 return;
             }
 
-            var prod = listaProductos.FirstOrDefault(p => p.IdProducto == id);
+            var prod = listaProductos.FirstOrDefault(x => x.IdProducto == id);
             if (prod == null)
             {
                 MessageBox.Show("Producto no encontrado.");
                 return;
             }
 
-            // 3. Agregar al carrito
-            var item = new ProduCarrito { Producto = prod, Cantidad = cantidad };
+            // AGREGAR A LA LISTA
+            var item = new ProduCarrito
+            {
+                Producto = prod,
+                Cantidad = cantidad
+            };
+
             carrito.Add(item);
-            listBoxCarrito.Items.Add(item);
-
             total += item.Subtotal;
-            lblTotal.Text = $"${total}";
 
+            RefrescarCarrito();
             LimpiarTextboxs();
         }
 
+
+        private void RefrescarCarrito()
+        {
+            listBoxCarrito.Items.Clear();
+            if (carrito == null || carrito.Count == 0)
+            {
+                listBoxCarrito.Items.Add("Vacio");
+                lblTotal.Text = "$0";
+                return;
+            }
+
+            foreach (var item in carrito)
+            {
+                string productoNombre = item.Producto != null ? (item.Producto.Nombre ?? $"ID:{item.IDProducto}") : $"ID:{item.IDProducto}";
+                string line = $"{productoNombre} Cant: {item.Cantidad} Sub: {item.Subtotal:C}";
+                listBoxCarrito.Items.Add(line);
+            }
+
+            lblTotal.Text = $"{total:C}";
+        }
+
+
         private void btnCompra_Click(object sender, EventArgs e)
         {
-            Venta venta = new Venta();
-            venta.FechaVenta = DateTime.Now;
-            venta.IDCliente = 1; // es para probar nada mas
-            venta.MontoTotal = carrito.Sum(x => x.Subtotal);
+            if (carrito.Count == 0)
+            {
+                MessageBox.Show("El carrito está vacío.");
+                return;
+            }
 
-            //
+            Venta venta = new Venta
+            {
+                FechaVenta = DateTime.Now,
+                IDCliente = Convert.ToInt32(cmbClientes.SelectedValue),
+                MontoTotal = carrito.Sum(x => x.Subtotal)
+            };
+
             List<DetalleVenta> detalles = carrito.Select(x => new DetalleVenta
             {
-                IDProducto = x.IDProducto,
-                Cantidad = x.Cantidad,
-                PrecioUnitario = x.PrecioUnitario,
+                    IDProducto = x.IDProducto,
+                    Cantidad = x.Cantidad,
+                    PrecioUnitario = x.PrecioUnitario
             }).ToList();
-            //
 
-            int idVenta = ventasBLL.RegistrarVenta(venta, detalles);
-
-            MessageBox.Show("Venta registrada correctamente. Numero de Venta: " + idVenta);
-
-            carrito.Clear();
-            listBoxCarrito.Items.Clear();
-            lblTotal.Text = "$0";
-            LimpiarTextboxs();
-            
-
-            //
-
-            int id = int.Parse(txtIdProducto.Text);
-            int cantidad = userControl21.Cantidad;
-
-
-            if (cantidad <= 0)
+            try
             {
-                MessageBox.Show("Cantidad inválida.");
-                return;
-            }
+                int idVenta = ventasBLL.RegistrarVenta(venta, detalles);
 
-            var prod = listaProductos.FirstOrDefault(p => p.IdProducto == id);
-            if (prod == null)
+                foreach (var item in carrito)
+                {
+                    ventasBLL.RestarStockProdu(item.IDProducto, item.Cantidad);
+                }
+
+                MessageBox.Show("Venta registrada correctamente. ID: " + idVenta);
+
+                carrito.Clear();
+                total = 0;
+
+                RefrescarCarrito();
+                LimpiarTextboxs();
+                ActualizarDGV();
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show("Producto no encontrado.");
-                return;
+                MessageBox.Show("Error al registrar venta: " + ex.Message);
             }
-
-
-            var item = new ProduCarrito { Producto = prod, Cantidad = cantidad };
-
-            ventasBLL.RestarStockProdu(id, cantidad );
-            ActualizarDGV();
         }
     }
     

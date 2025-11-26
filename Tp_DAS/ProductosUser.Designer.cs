@@ -40,6 +40,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.userControl21 = new Tp_DAS.UserControl2();
+            this.cmbClientes = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +50,7 @@
             this.label34.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(435, 448);
+            this.label34.Location = new System.Drawing.Point(565, 448);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(0, 25);
             this.label34.TabIndex = 0;
@@ -57,7 +59,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 52);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 52);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(544, 497);
             this.dataGridView1.TabIndex = 1;
@@ -65,7 +67,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnAgregar.Location = new System.Drawing.Point(636, 481);
+            this.btnAgregar.Location = new System.Drawing.Point(766, 481);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(131, 34);
             this.btnAgregar.TabIndex = 2;
@@ -77,9 +79,9 @@
             // 
             this.listBoxCarrito.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.listBoxCarrito.FormattingEnabled = true;
-            this.listBoxCarrito.Location = new System.Drawing.Point(596, 52);
+            this.listBoxCarrito.Location = new System.Drawing.Point(595, 52);
             this.listBoxCarrito.Name = "listBoxCarrito";
-            this.listBoxCarrito.Size = new System.Drawing.Size(139, 160);
+            this.listBoxCarrito.Size = new System.Drawing.Size(271, 160);
             this.listBoxCarrito.TabIndex = 3;
             // 
             // label1Carrito
@@ -87,7 +89,7 @@
             this.label1Carrito.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1Carrito.AutoSize = true;
             this.label1Carrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1Carrito.Location = new System.Drawing.Point(593, 31);
+            this.label1Carrito.Location = new System.Drawing.Point(592, 31);
             this.label1Carrito.Name = "label1Carrito";
             this.label1Carrito.Size = new System.Drawing.Size(53, 18);
             this.label1Carrito.TabIndex = 4;
@@ -96,7 +98,7 @@
             // txtIdProducto
             // 
             this.txtIdProducto.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtIdProducto.Location = new System.Drawing.Point(636, 372);
+            this.txtIdProducto.Location = new System.Drawing.Point(766, 372);
             this.txtIdProducto.Name = "txtIdProducto";
             this.txtIdProducto.Size = new System.Drawing.Size(100, 20);
             this.txtIdProducto.TabIndex = 5;
@@ -105,7 +107,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(636, 353);
+            this.label1.Location = new System.Drawing.Point(763, 356);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 7;
@@ -114,7 +116,7 @@
             // btnCompra
             // 
             this.btnCompra.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCompra.Location = new System.Drawing.Point(762, 196);
+            this.btnCompra.Location = new System.Drawing.Point(892, 196);
             this.btnCompra.Name = "btnCompra";
             this.btnCompra.Size = new System.Drawing.Size(86, 27);
             this.btnCompra.TabIndex = 9;
@@ -126,7 +128,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(759, 171);
+            this.label3.Location = new System.Drawing.Point(889, 171);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 10;
@@ -136,7 +138,7 @@
             // 
             this.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(813, 171);
+            this.lblTotal.Location = new System.Drawing.Point(943, 171);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(19, 13);
             this.lblTotal.TabIndex = 11;
@@ -144,11 +146,31 @@
             // 
             // userControl21
             // 
-            this.userControl21.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.userControl21.Location = new System.Drawing.Point(636, 398);
+            this.userControl21.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.userControl21.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.userControl21.Location = new System.Drawing.Point(766, 398);
             this.userControl21.Name = "userControl21";
-            this.userControl21.Size = new System.Drawing.Size(103, 50);
+            this.userControl21.Size = new System.Drawing.Size(100, 50);
             this.userControl21.TabIndex = 12;
+            // 
+            // cmbClientes
+            // 
+            this.cmbClientes.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cmbClientes.FormattingEnabled = true;
+            this.cmbClientes.Location = new System.Drawing.Point(766, 329);
+            this.cmbClientes.Name = "cmbClientes";
+            this.cmbClientes.Size = new System.Drawing.Size(184, 21);
+            this.cmbClientes.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(763, 313);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Clientes";
             // 
             // ProductosUser
             // 
@@ -156,7 +178,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(869, 611);
+            this.ClientSize = new System.Drawing.Size(999, 611);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cmbClientes);
             this.Controls.Add(this.userControl21);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label3);
@@ -192,5 +216,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTotal;
         private UserControl2 userControl21;
+        private System.Windows.Forms.ComboBox cmbClientes;
+        private System.Windows.Forms.Label label2;
     }
 }

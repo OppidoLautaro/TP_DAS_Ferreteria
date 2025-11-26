@@ -8,32 +8,20 @@ namespace BE
 {
     public class ProduCarrito
     {
-		private Producto producto;
+        public Producto Producto { get; set; }
 
-		public  Producto Producto
-		{
-			get { return producto; }
-			set { producto = value; }
-		}
+        public int Cantidad { get; set; }
 
-		private int cantidad;
+        public int IDProducto => Producto?.IdProducto ?? 0;
 
-		public int Cantidad
-		{
-			get { return cantidad; }
-			set { cantidad = value; }
-		}
+        public decimal PrecioUnitario => Producto?.Precio ?? 0;
 
-        public decimal Subtotal => Producto.Precio * Cantidad; 
-
-        public int IDProducto => Producto.IdProducto;
-        public decimal PrecioUnitario => Producto.Precio;
+        public decimal Subtotal => PrecioUnitario * Cantidad;
 
         public override string ToString()
         {
-            return $"{Producto.Nombre} x{Cantidad} = ${Subtotal}"; // Lo mostramos asi para el Listbox(Carrito)
+            return $"{Producto.Nombre} x{Cantidad} = ${Subtotal}";
         }
-
 
     }
 }

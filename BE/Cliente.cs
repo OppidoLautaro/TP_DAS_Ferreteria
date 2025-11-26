@@ -8,7 +8,13 @@ namespace BE
 {
     public class Cliente
     {
+		private int id;
 
+		public int Id
+		{
+			get { return id; }
+			set { id = value; }
+		}
 
 		private string nombre;
 
@@ -57,5 +63,7 @@ namespace BE
 			get { return direccion; }
 			set { direccion = value; }
 		}
-	}
+
+        public string ComboBox => $"{DNI} - {Nombre} {Apellido}";
+    }
 }
