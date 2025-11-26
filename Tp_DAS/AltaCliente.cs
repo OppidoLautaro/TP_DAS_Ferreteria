@@ -27,12 +27,23 @@ namespace Tp_DAS
 
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
+            string emailIngresado = userControl11.Email;
+
+            if (!userControl11.ValidaRegex(emailIngresado))
+            {
+                MessageBox.Show("El email no tiene un formato válido. Debe ser del tipo nombre@mail.com");
+                return; 
+            }
+            
+            MessageBox.Show("Email correcto, continuando...");
+
+            
             BE.Cliente cliente = new BE.Cliente();
 
             cliente.Nombre = txtNombreCliente.Text;
             cliente.Apellido = txtApellidoCliente.Text;
             cliente.DNI = txtbDNI.Text;
-            cliente.Email = txtbEmail.Text;
+            cliente.Email = emailIngresado;
             cliente.Telefono = txtbTelefono.Text;
             cliente.Direccion = txtbDireccion.Text;
 
@@ -54,7 +65,6 @@ namespace Tp_DAS
             txtNombreCliente.Clear();
             txtApellidoCliente.Clear();
             txtbDNI.Clear();
-            txtbEmail.Clear();
             txtbTelefono.Clear();
             txtbDireccion.Clear();
             }

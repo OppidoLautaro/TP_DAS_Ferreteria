@@ -35,12 +35,11 @@
             this.listBoxCarrito = new System.Windows.Forms.ListBox();
             this.label1Carrito = new System.Windows.Forms.Label();
             this.txtIdProducto = new System.Windows.Forms.TextBox();
-            this.txtCantidadProdu = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnCompra = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.userControl21 = new Tp_DAS.UserControl2();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,14 +101,6 @@
             this.txtIdProducto.Size = new System.Drawing.Size(100, 20);
             this.txtIdProducto.TabIndex = 5;
             // 
-            // txtCantidadProdu
-            // 
-            this.txtCantidadProdu.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtCantidadProdu.Location = new System.Drawing.Point(636, 414);
-            this.txtCantidadProdu.Name = "txtCantidadProdu";
-            this.txtCantidadProdu.Size = new System.Drawing.Size(100, 20);
-            this.txtCantidadProdu.TabIndex = 6;
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -119,16 +110,6 @@
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "ID Prodructo";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(636, 398);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Cantidad";
             // 
             // btnCompra
             // 
@@ -161,6 +142,14 @@
             this.lblTotal.TabIndex = 11;
             this.lblTotal.Text = "$0";
             // 
+            // userControl21
+            // 
+            this.userControl21.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.userControl21.Location = new System.Drawing.Point(636, 398);
+            this.userControl21.Name = "userControl21";
+            this.userControl21.Size = new System.Drawing.Size(103, 50);
+            this.userControl21.TabIndex = 12;
+            // 
             // ProductosUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,12 +157,11 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(869, 611);
+            this.Controls.Add(this.userControl21);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCompra);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCantidadProdu);
             this.Controls.Add(this.txtIdProducto);
             this.Controls.Add(this.label1Carrito);
             this.Controls.Add(this.listBoxCarrito);
@@ -199,11 +187,10 @@
         private System.Windows.Forms.ListBox listBoxCarrito;
         private System.Windows.Forms.Label label1Carrito;
         private System.Windows.Forms.TextBox txtIdProducto;
-        private System.Windows.Forms.TextBox txtCantidadProdu;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCompra;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblTotal;
+        private UserControl2 userControl21;
     }
 }

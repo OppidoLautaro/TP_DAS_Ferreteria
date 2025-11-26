@@ -33,15 +33,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregarCliente = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtbDNI = new System.Windows.Forms.TextBox();
-            this.txtbEmail = new System.Windows.Forms.TextBox();
-            this.txtbTelefono = new System.Windows.Forms.TextBox();
             this.txtbDireccion = new System.Windows.Forms.TextBox();
             this.txtApellidoCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.userControl11 = new Tp_DAS.UserControl1();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtbTelefono = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtNombreCliente
@@ -82,26 +81,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "DNI:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(443, 98);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 20);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Email";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(422, 163);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 20);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Telefono:";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -119,22 +98,6 @@
             this.txtbDNI.Name = "txtbDNI";
             this.txtbDNI.Size = new System.Drawing.Size(116, 29);
             this.txtbDNI.TabIndex = 9;
-            // 
-            // txtbEmail
-            // 
-            this.txtbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbEmail.Location = new System.Drawing.Point(517, 92);
-            this.txtbEmail.Name = "txtbEmail";
-            this.txtbEmail.Size = new System.Drawing.Size(116, 29);
-            this.txtbEmail.TabIndex = 10;
-            // 
-            // txtbTelefono
-            // 
-            this.txtbTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbTelefono.Location = new System.Drawing.Point(517, 157);
-            this.txtbTelefono.Name = "txtbTelefono";
-            this.txtbTelefono.Size = new System.Drawing.Size(116, 29);
-            this.txtbTelefono.TabIndex = 11;
             // 
             // txtbDireccion
             // 
@@ -162,19 +125,44 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Apellido:";
             // 
+            // userControl11
+            // 
+            this.userControl11.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.userControl11.Location = new System.Drawing.Point(394, 98);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(285, 44);
+            this.userControl11.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(422, 163);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 20);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Telefono:";
+            // 
+            // txtbTelefono
+            // 
+            this.txtbTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbTelefono.Location = new System.Drawing.Point(517, 157);
+            this.txtbTelefono.Name = "txtbTelefono";
+            this.txtbTelefono.Size = new System.Drawing.Size(116, 29);
+            this.txtbTelefono.TabIndex = 11;
+            // 
             // AltaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(734, 511);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.txtbDireccion);
             this.Controls.Add(this.txtbTelefono);
-            this.Controls.Add(this.txtbEmail);
             this.Controls.Add(this.txtbDNI);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnAgregarCliente);
             this.Controls.Add(this.label2);
@@ -197,14 +185,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAgregarCliente;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtbDNI;
-        private System.Windows.Forms.TextBox txtbEmail;
-        private System.Windows.Forms.TextBox txtbTelefono;
         private System.Windows.Forms.TextBox txtbDireccion;
         private System.Windows.Forms.TextBox txtApellidoCliente;
         private System.Windows.Forms.Label label2;
+        private UserControl1 userControl11;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtbTelefono;
     }
 }

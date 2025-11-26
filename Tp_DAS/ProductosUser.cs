@@ -41,7 +41,7 @@ namespace Tp_DAS
         public void LimpiarTextboxs()
         {
             txtIdProducto.Clear();
-            txtCantidadProdu.Clear();
+            
         }
 
         public void ActualizarDGV()
@@ -52,15 +52,27 @@ namespace Tp_DAS
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(txtIdProducto.Text, out int id))
+            // 1. Validar que la cantidad tenga solo números usando el Regex del UserControl
+            string cantidadTexto = userControl21.CantidadTexto;
+
+            if (!userControl21.ValidaRegex(cantidadTexto))
             {
-                MessageBox.Show("ID inválido.");
+                MessageBox.Show("La cantidad debe ser un número válido.");
                 return;
             }
 
-            if (!int.TryParse(txtCantidadProdu.Text, out int cantidad) || cantidad <= 0)
+            int cantidad = int.Parse(cantidadTexto);
+
+            if (cantidad <= 0)
             {
-                MessageBox.Show("Cantidad inválida.");
+                MessageBox.Show("La cantidad debe ser mayor a 0.");
+                return;
+            }
+
+            // 2. Validar ID
+            if (!int.TryParse(txtIdProducto.Text, out int id))
+            {
+                MessageBox.Show("ID inválido.");
                 return;
             }
 
@@ -71,14 +83,15 @@ namespace Tp_DAS
                 return;
             }
 
-
+            // 3. Agregar al carrito
             var item = new ProduCarrito { Producto = prod, Cantidad = cantidad };
             carrito.Add(item);
             listBoxCarrito.Items.Add(item);
+
             total += item.Subtotal;
             lblTotal.Text = $"${total}";
-            LimpiarTextboxs();
 
+            LimpiarTextboxs();
         }
 
         private void btnCompra_Click(object sender, EventArgs e)
@@ -110,7 +123,7 @@ namespace Tp_DAS
             //
 
             int id = int.Parse(txtIdProducto.Text);
-            int cantidad = int.Parse(txtCantidadProdu.Text);
+            int cantidad = userControl21.Cantidad;
 
 
             if (cantidad <= 0)
