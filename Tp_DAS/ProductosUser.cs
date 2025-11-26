@@ -42,8 +42,8 @@ namespace Tp_DAS
             var lista = c.ListarClientes();
 
             cmbClientes.DataSource = lista;
-            cmbClientes.DisplayMember = "ComboBox";  // lo que ve el usuario
-            cmbClientes.ValueMember = "Id";  // lo que se usa internamente
+            cmbClientes.DisplayMember = "ComboBox";  
+            cmbClientes.ValueMember = "Id";  
         }
 
         public void LimpiarTextboxs()
@@ -61,7 +61,7 @@ namespace Tp_DAS
         private void btnAgregar_Click(object sender, EventArgs e)
         {
 
-            // VALIDAR CANTIDAD (CON USER CONTROL)
+            
             string cantidadTexto = userControl21.CantidadTexto;
 
             if (!userControl21.ValidaRegex(cantidadTexto))
@@ -77,7 +77,7 @@ namespace Tp_DAS
                 return;
             }
 
-            // VALIDAR ID PRODUCTO
+            
             if (!int.TryParse(txtIdProducto.Text, out int id))
             {
                 MessageBox.Show("ID inválido.");
@@ -91,7 +91,7 @@ namespace Tp_DAS
                 return;
             }
 
-            // AGREGAR A LA LISTA
+            
             var item = new ProduCarrito
             {
                 Producto = prod,

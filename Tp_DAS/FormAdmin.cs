@@ -64,26 +64,26 @@ namespace Tp_DAS
         private void button2_Click(object sender, EventArgs e)
         {
             AbrirformulariosHijos(new Stock());
-            //..
+  
             OcultarSubmenu();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             AbrirformulariosHijos(new ResumenVentas());
-            //..
+
             OcultarSubmenu();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //..
+
             OcultarSubmenu();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //..
+
             OcultarSubmenu();
         }
 

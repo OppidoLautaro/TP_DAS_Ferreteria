@@ -70,8 +70,8 @@ namespace BLL
                 )
             );
 
-            string path = $"Venta_{idVenta}.xml";
-            xml.Save(path);
+            string destino = $"Venta_{idVenta}.xml";
+            xml.Save(destino);
         }
 
     }

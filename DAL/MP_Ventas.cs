@@ -11,7 +11,7 @@ namespace DAL
 {
     public class MP_Ventas
     {
-        Acceso acceso = new Acceso(); // tu clase de acceso a BD
+        Acceso acceso = new Acceso();
 
         public int RegistrarVenta(Venta venta)
         {
